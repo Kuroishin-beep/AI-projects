@@ -14,12 +14,12 @@ def calculator(a:float, b:float) -> str:
     
 
 def main():
-    model = ChatOpenAI(temperature = 0)
+    model = ChatOpenAI(temperature = 0, model="gpt-3.5-turbo:free")
     
     tools = [calculator]
     agent_executor = create_react_agent(model, tools)
     
-    print("Welcome bro")
+    print("Welcome")
     
     while True:
         user_input = input("\nYou: ").strip()
